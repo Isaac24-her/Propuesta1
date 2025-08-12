@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi novio?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 40px;
+      color: #d6336c;
+    }
+
+    .fotos {
+      margin: 30px auto;
+      max-width: 800px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .fotos img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .botones {
+      margin-top: 40px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #si {
+      background-color: #ff66a3;
+      color: white;
+    }
+
+    #no {
+      background-color: #ccc;
+      color: black;
+    }
+
+    #mensaje {
+      margin-top: 30px;
+      font-size: 24px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>¿Quieres ser mi novio?</h1>
+
+  <div class="fotos">
+    <!-- Sustituye estas imágenes con tus fotos personales -->
+    <img src="Foto1.jpeg" alt="Foto 1">
+    <img src="Foto2.jpeg" alt="Foto 2">
+    <img src="Foto3.jpeg" alt="Foto 3">
+  </div>
+
+  <div class="botones">
+    <button id="si">Sí</button>
+    <button id="no">No</button>
+  </div>
+
+  <div id="mensaje">¡Muchas gracias por dejarme ser tu pareja! 💖</div>
+
+  <script>
+    document.getElementById("si").addEventListener("click", function() {
+      document.getElementById("mensaje").style.display = "block";
+    });
+
+    document.getElementById("no").addEventListener("mouseover", function() {
+      // Hace que el botón "No" se mueva
+      const btn = document.getElementById("no");
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      btn.style.position = "absolute";
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    });
+  </script>
+
+</bod
